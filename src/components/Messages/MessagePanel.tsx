@@ -15,8 +15,8 @@ function filterMessagesByTagOptions(
   return messages.filter((message) =>
     tagOptions.some(
       (tag) =>
-        hasMessageTagName(message, tag.value) || message.tags.length === 0
-    )
+        hasMessageTagName(message, tag.value)
+    ) || message.tags.length === 0
   );
 }
 
